@@ -29,7 +29,8 @@ mpl.rc('image', cmap='gray')
 
 def compute_traj(filename):
         
-    vid = pims.Video('../050218_recordings/'+filename)
+#    vid = pims.Video('../060218_recordings/'+filename)
+    vid = pims.Video('../test_vids/'+filename)
     frames = as_grey(vid)
 
     midpoint = len(frames)/2
@@ -66,9 +67,10 @@ def compute_traj(filename):
                          'ep': ep
                         })
     df = pd.DataFrame(data)
-    df.to_csv('../csv_raw/csv_raw_5/' + str(filename.split('.')[0]) + '.csv') 
+    df.to_csv('../csv_raw/csv_raw_7/' + str(filename.split('.')[0]) + '.csv') 
 
-directory = os.fsencode("../050218_recordings/")
+#directory = os.fsencode("../060218_recordings/")
+directory = os.fsencode("../test_vids/")
 
 for file in os.listdir(directory):
     filename = os.fsdecode(file)

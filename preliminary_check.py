@@ -32,16 +32,16 @@ def generateDriftPlots():
             plt.xlabel('Frame Number')
             plt.ylabel('Pixels')
             plt.plot(x)
-            plt.savefig('../Figures/drift_plots_2/'+filename+'.pdf', format='pdf', dpi=3000)    
+#            plt.savefig('../Figures/drift_plots_2/'+filename+'.pdf', format='pdf', dpi=3000)    
 
 def generateBandPlots():
     
-    directory = os.fsencode("../final_csv/final_csv_5")
+    directory = os.fsencode("../final_csv/final_csv_7")
     
     for file in os.listdir(directory):
         filename = os.fsdecode(file)
         if filename.endswith(".csv"): 
-            df = pd.DataFrame.from_csv("../final_csv/final_csv_5/" + filename)
+            df = pd.DataFrame.from_csv("../final_csv/final_csv_7/" + filename)
             
             condition1 = df['n'] > 0.0
             
@@ -63,9 +63,9 @@ def firstApprox(filename, filtered):
     plot.grid(linestyle='--', which='minor', linewidth=1)
     plot.set_title(str(filename))
     for i in range(7):
-        plot.axhline(y=(i+1)*1.25, linewidth=1, color='r')
+        plot.axhline(y=(i+1)*1.00, linewidth=1, color='r')
     
-    plt.savefig('../Figures/indiv_plots_3/'+filename+'.pdf', format='pdf', dpi=3000)  
+    plt.savefig('../Figures/indiv_plots_4/'+filename+'.pdf', format='pdf', dpi=3000)  
         
 #generateDriftPlots()
 generateBandPlots()

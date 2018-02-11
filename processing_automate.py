@@ -72,12 +72,12 @@ def highestNumber(start, end, number, all_middle):
     key = int(max(turning_dict.items(), key=operator.itemgetter(1))[0])
     return key
 
-directory = os.fsencode("../csv_raw/csv_raw_5")
+directory = os.fsencode("../csv_raw/csv_raw_7/525_wiped")
 
 for file in os.listdir(directory):
     filename = os.fsdecode(file)
     if filename.endswith(".csv"): 
-        df = pd.DataFrame.from_csv("../csv_raw/csv_raw_5/"+str(filename))
+        df = pd.DataFrame.from_csv("../csv_raw/csv_raw_7/525_wiped/"+str(filename))
         pivoted = df.pivot(index = "frame", columns = "particle")
         pivoted_y = pivoted['y']
         pivoted_dy = pivoted['dy']
@@ -91,4 +91,4 @@ for file in os.listdir(directory):
         filtered_particles, turning_indices = returnParticles(middle)
         final = returnFinal(int(filename.split('-')[0]))
         data_final = pd.DataFrame(final)
-        data_final.to_csv("../final_csv/final_csv_5_20/final_"+str(filename))
+        data_final.to_csv("../final_csv/final_csv_7/final_"+str(filename))
