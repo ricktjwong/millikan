@@ -3,7 +3,7 @@
 
 Recognising charged oil drops in Millikan's oil drop experiment
 
-Millikan's oil drop experiment involves the measurement of several terminal velocities of oil droplets at various conditions to be able to eventually deduce its charge. One would usually look through the microsoft, keeping track of one oil droplet at a time, and record its velocity from observation the change in position over time.
+Millikan's oil drop experiment involves the measurement of several terminal velocities of oil droplets at various conditions to be able to eventually deduce its charge. One would usually look through the microscope, keeping track of one oil droplet at a time, and record its velocity from observation the change in position over time.
 
 This is time consuming and medieval, and these python scripts were written to:
 
