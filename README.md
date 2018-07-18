@@ -12,8 +12,7 @@ This is time consuming and medieval, and these python scripts were written to:
 
 These were done using trackpy: https://github.com/soft-matter/trackpy, a Python implementation of the Crocker-Grier algorithm which helps with particle tracking across frames
 
-To get started - clone the repo: git clone "https://github.com/ricktjwong/millikan.git".
-Download Python v3.6 and install trackpy and it's dependencies.
+To get started - clone the repo: git clone https://github.com/ricktjwong/millikan.git. Download Python v3.6 and install trackpy and it's dependencies.
 
 The first file to run will be Python/extract.py, which reads the sample MOV file from test_video, recognises the oil droplets and tracks them, and extracts the important data into a csv as csv/extract.csv. This might take a while as processing is done on most frames in the video.
 
